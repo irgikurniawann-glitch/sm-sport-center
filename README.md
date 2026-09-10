@@ -1,67 +1,151 @@
-# Sistem Reservasi Lapangan SM Sport Center
+# SM Sport Center — Sistem Reservasi Lapangan Berbasis Web
 
-Sistem reservasi lapangan olahraga berbasis web yang dikembangkan untuk membantu proses pengelolaan reservasi lapangan futsal dan badminton pada SM Sport Center.
+Sistem Reservasi Lapangan SM Sport Center adalah aplikasi berbasis web yang digunakan untuk mengelola reservasi lapangan olahraga secara terstruktur dan mengurangi risiko terjadinya bentrok jadwal.
 
-## Tentang Project
+Aplikasi ini mendukung pengelolaan lapangan futsal dan badminton, data pelanggan, reservasi, status pembayaran, serta laporan reservasi.
 
-Sistem ini dibuat sebagai project akademik untuk menerapkan konsep pengembangan aplikasi web, pengelolaan database, CRUD, autentikasi pengguna, serta validasi reservasi.
+## Fitur Utama
 
-Project memiliki dua jenis pengguna:
-
-- **Admin** — mengelola data pelanggan, lapangan, reservasi, dan laporan.
-- **Pelanggan** — melakukan login dan melakukan reservasi lapangan.
-
-## Fitur
-
-- Login Admin dan Pelanggan
-- Registrasi pelanggan
-- Dashboard
-- Kelola data pelanggan
-- Kelola data lapangan
+### Admin
+- Login admin
+- Dashboard admin
+- Kelola data pelanggan (CRUD)
+- Kelola data lapangan (CRUD)
 - Kelola data reservasi
-- Reservasi lapangan futsal dan badminton
-- Validasi bentrok jadwal
-- Pengelolaan status pembayaran
-- Laporan reservasi
+- Melihat status pembayaran
+- Melihat laporan reservasi
 - Logout
 
-## Teknologi
+### Pelanggan
+- Registrasi akun
+- Login menggunakan username atau email
+- Melihat informasi lapangan
+- Melakukan reservasi lapangan
+- Melihat informasi reservasi
+- Logout
 
-- PHP Native
-- MySQL / MariaDB
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-- Git & GitHub
-- XAMPP
+### Reservasi
+- Pemilihan tanggal sewa
+- Pemilihan jam mulai dan jam selesai
+- Perhitungan total harga
+- Pemilihan jenis lapangan
+- Pencatatan jenis pembayaran
+- Pencatatan status pembayaran
+- Validasi bentrok jadwal untuk mencegah double booking
+
+## Teknologi yang Digunakan
+
+- **PHP** — Backend / server-side programming
+- **MySQL** — Database management system
+- **HTML5** — Struktur halaman web
+- **CSS3** — Styling dan tampilan
+- **JavaScript** — Interaksi pada halaman
+- **Bootstrap** — Responsive user interface
+- **phpMyAdmin** — Database administration
+- **MySQLi** — Koneksi PHP dengan MySQL
 
 ## Database
 
-Database menggunakan MySQL/MariaDB dengan tabel utama:
+Database yang digunakan:
 
-- `admin`
-- `pelanggan`
-- `lapangan`
-- `reservasi`
+`sm_sport_center`
 
-Relasi utama:
+### Tabel
+
+| Tabel | Keterangan |
+|---|---|
+| `admin` | Menyimpan data akun admin |
+| `pelanggan` | Menyimpan data pelanggan |
+| `lapangan` | Menyimpan data lapangan |
+| `reservasi` | Menyimpan data reservasi dan pembayaran |
+
+### Relasi
 
 - Satu pelanggan dapat memiliki banyak reservasi.
 - Satu lapangan dapat memiliki banyak reservasi pada waktu yang berbeda.
-- Data reservasi terhubung dengan pelanggan dan lapangan menggunakan foreign key.
+- Setiap reservasi terhubung dengan satu pelanggan dan satu lapangan.
 
-Sistem juga menggunakan validasi pada database untuk mencegah terjadinya double booking pada lapangan dan waktu yang sama.
+## Validasi Bentrok Jadwal
 
-## Cara Menjalankan Project
+Sistem memiliki validasi untuk mencegah dua reservasi aktif menggunakan lapangan yang sama pada waktu yang bertabrakan.
 
-### 1. Install XAMPP
+Validasi dilakukan pada database menggunakan trigger sebelum data reservasi ditambahkan atau diperbarui.
 
-Pastikan Apache dan MySQL/MariaDB sudah tersedia melalui XAMPP.
+Dengan demikian, sistem dapat membantu mencegah terjadinya **double booking**.
 
-### 2. Letakkan project
+## Testing
 
-Salin folder project ke:
+Beberapa pengujian yang dilakukan:
+
+| Modul | Pengujian | Hasil |
+|---|---|---|
+| Koneksi Database | Koneksi ke MySQL | Pass |
+| Login | Login admin/pelanggan | Pass |
+| Pelanggan | Validasi data pelanggan | Pass |
+| Reservasi | Perhitungan total harga | Pass |
+| Reservasi | Validasi bentrok jadwal | Pass |
+| Laporan | Filter laporan | Pass |
+| Logout | Penghapusan session | Pass |
+
+## Struktur Project
 
 ```text
-C:\xampppp\htdocs\
+sm-sport-center/
+├── dashboard.php
+├── dashboard_pelanggan.php
+├── edit.php
+├── edit_lapangan.php
+├── edit_pelanggan.php
+├── edit_reservasi.php
+├── hapus.php
+├── hapus_lapangan.php
+├── hapus_pelanggan.php
+├── hapus_reservasi.php
+├── index.php
+├── index_pelanggan.php
+├── koneksi.php
+├── lapangan.php
+├── laporan.php
+├── logout.php
+├── pelanggan.php
+├── proses_login.php
+├── register.php
+├── reservasi.php
+├── tambah_lapangan.php
+├── tambah_pelanggan.php
+├── tambah_reservasi.php
+└── test.php
+
+## Tujuan Project
+
+Project ini dibuat sebagai implementasi pembelajaran dalam pengembangan aplikasi web, khususnya:
+
+Analisis kebutuhan sistem
+Perancangan basis data
+Relasi antar tabel
+Implementasi CRUD
+Authentication dan session
+Validasi data
+Pengelolaan reservasi
+Pencegahan double booking
+Penggunaan PHP dan MySQL
+
+## Pengembangan Selanjutnya
+
+Beberapa pengembangan yang dapat dilakukan:
+
+Password hashing secara menyeluruh
+Role dan authorization yang lebih terstruktur
+Notifikasi reservasi
+Integrasi pembayaran digital
+Export laporan ke PDF/Excel
+Dashboard statistik yang lebih interaktif
+Deployment ke hosting/server online
+
+## Developer
+
+Irgi Kurniawan
+
+Web-based Sports Field Reservation System
+
+Technologies: PHP • MySQL • HTML • CSS • JavaScript • Bootstrap
