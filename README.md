@@ -116,36 +116,35 @@ sm-sport-center/
 ├── tambah_reservasi.php
 └── test.php
 
-## Tujuan Project
+## Fokus Project
 
-Project ini dibuat sebagai implementasi pembelajaran dalam pengembangan aplikasi web, khususnya:
+Project ini menerapkan:
 
-Analisis kebutuhan sistem
-Perancangan basis data
-Relasi antar tabel
-Implementasi CRUD
-Authentication dan session
-Validasi data
-Pengelolaan reservasi
-Pencegahan double booking
-Penggunaan PHP dan MySQL
+- Sistem reservasi lapangan berbasis web
+- Login admin dan pelanggan
+- Pengelolaan data pelanggan dan lapangan
+- Pengelolaan reservasi dan pembayaran
+- Operasi CRUD
+- Perancangan basis data relasional
+- Validasi bentrok jadwal
+- Penggunaan session
+- Laporan dan filter data
 
 ## Pengembangan Selanjutnya
 
-Beberapa pengembangan yang dapat dilakukan:
+Beberapa fitur yang dapat dikembangkan:
 
-Password hashing secara menyeluruh
-Role dan authorization yang lebih terstruktur
-Notifikasi reservasi
-Integrasi pembayaran digital
-Export laporan ke PDF/Excel
-Dashboard statistik yang lebih interaktif
-Deployment ke hosting/server online
+- Pengamanan password dengan hashing secara menyeluruh
+- Integrasi pembayaran online
+- Notifikasi reservasi
+- Export laporan ke PDF/Excel
+- Dashboard statistik yang lebih interaktif
+- Deployment ke server online
 
-## Developer
+## Pengembang
 
-Irgi Kurniawan
+**Irgi Kurniawan**
 
-Web-based Sports Field Reservation System
+Sistem Reservasi Lapangan SM Sport Center berbasis web
 
-Technologies: PHP • MySQL • HTML • CSS • JavaScript • Bootstrap
+**Teknologi:** PHP • MySQL • HTML • CSS • JavaScript • Bootstrap
