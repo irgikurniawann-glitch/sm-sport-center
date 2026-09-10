@@ -115,36 +115,3 @@ sm-sport-center/
 ├── tambah_pelanggan.php
 ├── tambah_reservasi.php
 └── test.php
-
-## Fokus Project
-
-Project ini menerapkan:
-
-- Sistem reservasi lapangan berbasis web
-- Login admin dan pelanggan
-- Pengelolaan data pelanggan dan lapangan
-- Pengelolaan reservasi dan pembayaran
-- Operasi CRUD
-- Perancangan basis data relasional
-- Validasi bentrok jadwal
-- Penggunaan session
-- Laporan dan filter data
-
-## Pengembangan Selanjutnya
-
-Beberapa fitur yang dapat dikembangkan:
-
-- Pengamanan password dengan hashing secara menyeluruh
-- Integrasi pembayaran online
-- Notifikasi reservasi
-- Export laporan ke PDF/Excel
-- Dashboard statistik yang lebih interaktif
-- Deployment ke server online
-
-## Pengembang
-
-**Irgi Kurniawan**
-
-Sistem Reservasi Lapangan SM Sport Center berbasis web
-
-**Teknologi:** PHP • MySQL • HTML • CSS • JavaScript • Bootstrap
