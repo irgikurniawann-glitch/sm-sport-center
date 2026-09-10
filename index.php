@@ -4,9 +4,9 @@ session_start();
 // Jika sudah login, alihkan otomatis sesuai peran (role)
 if (isset($_SESSION['login'])) {
     if (isset($_SESSION['role']) && $_SESSION['role'] === 'pelanggan') {
-        header("Location: dashboard_pelanggan.php");
+        header("Location: /sm_sport_center/dashboard_pelanggan.php");
     } else {
-        header("Location: dashboard.php");
+        header("Location: /sm_sport_center/dashboard.php");
     }
     exit;
 }
